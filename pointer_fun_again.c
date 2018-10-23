@@ -12,6 +12,8 @@
  * again starting by 2, 3, etc.
  * ----------------------------------------------------------
  */
+#include "stdio.h"
+#include "string.h"
 
 struct PlayStruct {
   int int_value;
@@ -27,5 +29,6 @@ int main(int argc, char const *argv[]) {
 
   play_struct_pointer->int_value = 3;
   play_struct_pointer->double_value = 3.141;
+  strcpy(play_struct_pointer->string_value, "Test");
   return 0;
 }
