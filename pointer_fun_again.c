@@ -18,31 +18,10 @@ struct PlayStruct {
   char a_string[64];
 };
 
-void change_struct(struct PlayStruct ps, struct PlayStruct* pps) {
-  ps.int_value = 12;
-  ps.double_value = 42.01;
-  strcpy(ps.a_string, "Changed values.. Or not?");
-
-  pps->int_value = 25;
-  pps->double_value = 187.4;
-  strcpy(pps->a_string, "Change happened!");
-}
-
-void print_struct(struct PlayStruct ps, struct PlayStruct* pps) {
-  printf("Values of struct ps: %d, %lf, %s\n", ps.int_value, ps.double_value, ps.a_string);
-  printf("Values of struct pps: %d, %lf, %s\n", pps->int_value, pps->double_value, pps->a_string);
-}
-
-void print_string(char string_to_print[])
-{
-  printf("%s\n", string_to_print);
-}
-
-void change_string(char string1[], char* p_string[])
-{
-  string1[2] = '\0';
-  *(*p_string + 1) = '\0';
-}
+void change_struct(struct PlayStruct ps, struct PlayStruct* pps);
+void print_struct(struct PlayStruct ps, struct PlayStruct* pps);
+void print_string(char string_to_print[]);
+void change_string(char string1[], char* p_string[]);
 
 int main(int argc, char const *argv[]) {
   struct PlayStruct play_struct;
@@ -74,4 +53,30 @@ int main(int argc, char const *argv[]) {
   // ↑ Both strings get changed because they're pointers
 
   return 0;
+}
+
+void change_struct(struct PlayStruct ps, struct PlayStruct* pps) {
+  ps.int_value = 12;
+  ps.double_value = 42.01;
+  strcpy(ps.a_string, "Changed values.. Or not?");
+
+  pps->int_value = 25;
+  pps->double_value = 187.4;
+  strcpy(pps->a_string, "Change happened!");
+}
+
+void print_struct(struct PlayStruct ps, struct PlayStruct* pps) {
+  printf("Values of struct ps: %d, %lf, %s\n", ps.int_value, ps.double_value, ps.a_string);
+  printf("Values of struct pps: %d, %lf, %s\n", pps->int_value, pps->double_value, pps->a_string);
+}
+
+void print_string(char string_to_print[])
+{
+  printf("%s\n", string_to_print);
+}
+
+void change_string(char string1[], char* p_string[])
+{
+  string1[2] = '\0';
+  *(*p_string + 1) = '\0';
 }
