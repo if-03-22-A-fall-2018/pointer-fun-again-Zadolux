@@ -12,14 +12,15 @@
  * again starting by 2, 3, etc.
  * ----------------------------------------------------------
  */
-#include "stdio.h"
-#include "string.h"
+#include <stdio.h>
+#include <string.h>
 
 struct PlayStruct {
   int int_value;
   double double_value;
   char string_value[64];
 };
+
 
 int main(int argc, char const *argv[]) {
   struct PlayStruct play_struct;
