@@ -6,7 +6,7 @@
  * Author:    Wallinger Marc
  * ----------------------------------------------------------
  * Description:
- *
+ * Once again: Messing around with those funny pointers
  * ----------------------------------------------------------
  */
 #include <stdio.h>
