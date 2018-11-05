@@ -23,9 +23,8 @@ struct PlayStruct {
 
 int main(int argc, char const *argv[]) {
   struct PlayStruct play_struct;
-  struct PlayStruct play_struct_pt;
   struct PlayStruct* play_struct_pointer;
-  play_struct_pointer = &play_struct_pt;
+  play_struct_pointer = &play_struct;
 
   play_struct_pointer->int_value = 3;
   play_struct_pointer->double_value = 3.141;
