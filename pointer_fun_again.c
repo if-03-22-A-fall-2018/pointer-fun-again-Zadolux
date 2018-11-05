@@ -71,5 +71,7 @@ int main(int argc, char const *argv[]) {
 
   print_string(play_struct.a_string);
   print_string(another_string);
+  // ↑ Both strings get changed because they're pointers
+
   return 0;
 }
